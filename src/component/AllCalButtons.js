@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function AllCalButtons(props) {
+  // display all the buttons and send clicked button data to MainCal
   const totalMath = (data) => {
     props.clickValue(data);
   };

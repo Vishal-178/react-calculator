@@ -33,12 +33,14 @@ export default function MainCal() {
     setPrevValue("");
     setNoDisplay(true);
   };
+  // when back remove total value
   const back = () => {
     setTotal(total.slice(0, -1));
   };
   const equal = () => {
     setAfterEqual(true);
   };
+  // on each button click calculate value and display total and all values to get total
   const clickValue = (num) => {
     if (afterEqual) {
       setAfterEqual(false);
@@ -89,6 +91,7 @@ export default function MainCal() {
     }
   };
   return (
+    // rendering display and all buttons
     <div className="mainCal">
       <Display value={value} total={total} />
       <AllCalButtons clickValue={clickValue} />
